@@ -1,0 +1,19 @@
+{
+  "name": "mcs",
+  "version": "0.0.1",
+  "description": "The stellar.org modular client",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Stellar Development Foundation <stellar@stellar.org>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stellar/mcs.git"
+  },
+  "dependencies": {
+    "mcs-core": "git+https://github.com/stellar/mcs-core.git#master",
+    "mcs-login": "git+https://github.com/stellar/mcs-login.git#master",
+    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master"
+  }
+}
