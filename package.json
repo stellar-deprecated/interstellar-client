@@ -14,6 +14,7 @@
   "dependencies": {
     "mcs-core": "git+https://github.com/stellar/mcs-core.git#master",
     "mcs-login": "git+https://github.com/stellar/mcs-login.git#master",
-    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master"
+    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master",
+    "mcs-stellar-api": "git+https://github.com/stellar/mcs-stellar-api.git#master"
   }
 }

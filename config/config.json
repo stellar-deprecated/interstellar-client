@@ -1,0 +1,9 @@
+{
+  "modules": {
+    "mcs-stellard": {
+      "pre-send-widget": {
+        "nextState": "send"
+      }
+    }
+  }
+}
