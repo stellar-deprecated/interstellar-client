@@ -1,12 +1,13 @@
+@import "~kelp/lib/_index";
+
 body {
   margin: 0;
+
+  h2 {
+    color: red;
+  }
 }
-@import "normalize.css/normalize.css";
-@import "susy/sass/susy";
 
-$susy: (
-  global-box-sizing: border-box,
-  use-custom: (rem: true)
-);
-
-@include border-box-sizing;
+section {
+  @include K-flex-row();
+}
