@@ -1,5 +1,5 @@
 {
-  "name": "mcs",
+  "name": "mcs-stellar-client",
   "version": "0.0.1",
   "description": "The stellar.org modular client",
   "scripts": {
