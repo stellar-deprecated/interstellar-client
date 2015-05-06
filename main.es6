@@ -1,5 +1,7 @@
 require("file?name=index.html!./index.html");
-require('./main.scss');
+
+require('./styles/main.header.scss');
+require('./styles/main.footer.scss');
 
 import {App, mod as mcsCore} from "mcs-core";
 import {mod as mcsLogin} from "mcs-login";
