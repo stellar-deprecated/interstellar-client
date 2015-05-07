@@ -1,10 +1,37 @@
-<h1>Dashboard</h1>
+<div class="app-dashboard-webApp">
+  <div class="app-dashboard-webApp__header">
+    <div class="app-dashboard-logo">
+      LOGO
+    </div>
+    <div class="app-dashboard-headerAux">
+      @foobar: 12,345.6 STR
+    </div>
+  </div>
 
-<section>
-    <mcs-stellard-balance></mcs-stellard-balance>
-</section>
+  <div class="app-dashboard-webApp__content">
+    <section>
+      <mcs-stellard-balance></mcs-stellard-balance>
+    </section>
 
-<mcs-stellard-pre-send></mcs-stellard-pre-send>
-<mcs-stellard-receive></mcs-stellard-receive>
-<hr />
-<mcs-stellard-history></mcs-stellard-history>
+    <mcs-stellard-pre-send></mcs-stellard-pre-send>
+    <mcs-stellard-receive></mcs-stellard-receive>
+    <hr />
+    <mcs-stellard-history></mcs-stellard-history>
+  </div>
+  <div class="app-dashboard-webApp__footer">
+    <ul class="app-dashboard-tabBar">
+      <li class="app-dashboard-tabBar__item">
+        <a class="app-dashboard-tabBar__item__a" href="">Balances</a>
+      </li>
+      <li class="app-dashboard-tabBar__item">
+        <a class="app-dashboard-tabBar__item__a" href="">Send</a>
+      </li>
+      <li class="app-dashboard-tabBar__item">
+        <a class="app-dashboard-tabBar__item__a" href="">Receive</a>
+      </li>
+      <li class="app-dashboard-tabBar__item">
+        <a class="app-dashboard-tabBar__item__a" href="">History</a>
+      </li>
+    </ul>
+  </div>
+</div>

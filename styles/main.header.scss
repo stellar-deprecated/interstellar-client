@@ -3,14 +3,66 @@
 @import "kelp/lib/index";
 @import "kelp-theme-sdf/lib/index";
 
-body {
-  margin: 0;
-  color: $primary;
-  h2 {
-    color: red;
-  }
+// HACK: copied over from mcs-frontend
+@import "_kelp-css-bundle";
+
+
+// app-dashboard
+.app-dashboard-webApp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @include K-flex-col;
+}
+.app-dashboard-webApp__header {
+  @include K-flex-row;
+  height: $k-scale-c;
+  border-bottom: 1px solid $k-color-F;
+  justify-content: space-between;
+}
+.app-dashboard-headerAux {
+}
+.app-dashboard-logo {
+}
+.app-dashboard-webApp__content {
+  flex: 1;
+  overflow-y: scroll;
+}
+.app-dashboard-tabBar {
+  @include K-flex-row;
+  border-top: 1px solid $k-color-F;
+}
+.app-dashboard-tabBar__item {
+  flex: 12;
+  list-style-type: none;
+}
+.app-dashboard-tabBar__item__a {
+  display: block;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  line-height: $k-scale-up3raw;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.app-dashboard-tabBar__item__a:hover {
+  border-bottom: 4px solid $k-color-F;
 }
 
-section {
-  @include K-flex-row();
+// mcs-login
+.mcs-login {
+
+}
+.mcs-login-inputGroup__label {
+  flex: 0 0 100%;
+}
+.r-media-medium .mcs-login-inputGroup__label {
+  flex: 0 0 25%;
+}
+.mcs-login-inputGroup__input[type="checkbox"] {
+  height: $k-scale-4;
+  flex: 0 0 $k-scale-4;
 }
