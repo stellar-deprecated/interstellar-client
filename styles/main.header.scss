@@ -1,11 +1,12 @@
 /* header */
 
+// kelp-library-bundle
 @import "kelp/lib/index";
 @import "kelp-theme-sdf/lib/index";
 
-// HACK: copied over from mcs-frontend
-@import "_kelp-css-bundle";
-
+// kelp-css-bundle
+@import "kelp/styles/index";
+@import "kelp-theme-sdf/styles/index";
 
 // app-dashboard
 .app-dashboard-webApp {
