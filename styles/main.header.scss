@@ -30,7 +30,9 @@
 }
 .app-dashboard-webApp__content {
   flex: 1;
+  height: 0;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .app-dashboard-tabBar {
   @include K-flex-row;
