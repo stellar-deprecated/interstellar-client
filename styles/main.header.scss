@@ -9,6 +9,10 @@
 @import "kelp-theme-sdf/styles/index";
 
 // app-dashboard
+// it is position fixed so that the header bar doesn't cover things up on mobile
+html {
+  overflow: hidden; // disable elastic scrolling
+}
 .app-dashboard-webApp {
   position: fixed;
   top: 0;
