@@ -62,17 +62,17 @@ html {
   border-bottom: 4px solid $k-color-F;
 }
 
-// mcs-login
-.mcs-login {
-
-}
-.mcs-login-inputGroup__label {
-  flex: 0 0 100%;
-}
-.r-media-medium .mcs-login-inputGroup__label {
-  flex: 0 0 25%;
-}
-.mcs-login-inputGroup__input[type="checkbox"] {
-  height: $k-scale-4;
-  flex: 0 0 $k-scale-4;
+// Widget isolation demo
+mcs-stellard-receive > div:hover,
+mcs-stellard-pre-send > div:hover,
+mcs-stellard-balance > div:hover,
+mcs-stellard-pre-send > div:hover,
+mcs-stellard-send > div:hover,
+mcs-stellard-send > div:hover,
+mcs-stellard-receive > div:hover,
+mcs-stellard-history > div:hover {
+  box-shadow: 0px 0px 2px #fff,
+        inset 0px 0px 15px rgba(0,0,0,0.7),
+        inset 0px 0px 1px red,
+        inset 0px 0px 1px red;
 }
