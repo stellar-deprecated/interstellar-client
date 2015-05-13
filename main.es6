@@ -3,7 +3,7 @@ require("file?name=index.html!./index.html");
 require('./styles/main.header.scss');
 require('./styles/main.footer.scss');
 
-import {App, mod as mcsCore} from "mcs-core";
+import {App, Intent, mod as mcsCore} from "mcs-core";
 import {mod as mcsLogin} from "mcs-login";
 import {mod as mcsStellard} from "mcs-stellard";
 import {mod as mcsSettings} from "mcs-settings";
@@ -41,10 +41,19 @@ app.routes = ($stateProvider) => {
     requireSession: true
   });
   $stateProvider.state('send', {
-    url: "/send/:destination",
+    url: "/send",
     templateUrl: "mcs-stellar-client/send",
     requireSession: true
   });
 };
+
+// Register BroadcastReceivers
+let registerBroadcastReceivers = ($state, IntentBroadcast) => {
+  IntentBroadcast.registerReceiver(Intent.TYPES.SEND_TRANSACTION, intent => {
+    $state.transitionTo('send');
+  });
+};
+registerBroadcastReceivers.$inject = ["$state", "mcs-core.IntentBroadcast"];
+app.run(registerBroadcastReceivers);
 
 app.bootstrap();
