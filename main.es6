@@ -50,7 +50,15 @@ app.routes = ($stateProvider) => {
 // Register BroadcastReceivers
 let registerBroadcastReceivers = ($state, IntentBroadcast) => {
   IntentBroadcast.registerReceiver(Intent.TYPES.SEND_TRANSACTION, intent => {
-    $state.transitionTo('send');
+    $state.go('send');
+  });
+
+  IntentBroadcast.registerReceiver(Intent.TYPES.SHOW_DASHBOARD, intent => {
+    $state.go('dashboard');
+  });
+
+  IntentBroadcast.registerReceiver(Intent.TYPES.LOGOUT, intent => {
+    $state.go('index');
   });
 };
 registerBroadcastReceivers.$inject = ["$state", "mcs-core.IntentBroadcast"];
