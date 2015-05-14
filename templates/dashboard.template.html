@@ -1,61 +1,9 @@
 <div class="app-dashboard-webApp">
-  <div class="app-dashboard-webApp__header">
-    <div class="app-dashboard-logo">
-      LOGO
-    </div>
-    <div class="app-dashboard-headerAux">
-      @foobar: 12,345.6 STR <a class="k-button" href="">Log out</a>
-    </div>
-  </div>
-
-  <div class="app-dashboard-webApp__popDown">
-    <mcs-stellard-receive></mcs-stellard-receive>
-    <mcs-stellard-pre-send></mcs-stellard-pre-send>
-  </div>
+  <ng-include src="'mcs-stellar-client/_header'"></ng-include>
 
   <div class="app-dashboard-webApp__content">
     <h2>Balances</h2>
     <mcs-stellard-balance></mcs-stellard-balance>
-
-    <hr>
-
-    <h2>Pre send</h2>
-    <mcs-stellard-pre-send></mcs-stellard-pre-send>
-
-    <hr>
-
-    <h2>Send</h2>
-    <mcs-stellard-send></mcs-stellard-send>
-
-    <hr>
-
-    <h2>Send (duplicate demo)</h2>
-    <mcs-stellard-send></mcs-stellard-send>
-
-    <hr>
-
-    <h2>Receive</h2>
-    <mcs-stellard-receive></mcs-stellard-receive>
-
-    <hr>
-
-    <h2>History</h2>
-    <mcs-stellard-history></mcs-stellard-history>
   </div>
-  <div class="app-dashboard-webApp__footer">
-    <ul class="app-dashboard-tabBar">
-      <li class="app-dashboard-tabBar__item">
-        <a class="app-dashboard-tabBar__item__a" href="">Balances</a>
-      </li>
-      <li class="app-dashboard-tabBar__item">
-        <a class="app-dashboard-tabBar__item__a" href="">Send</a>
-      </li>
-      <li class="app-dashboard-tabBar__item">
-        <a class="app-dashboard-tabBar__item__a" href="">Receive</a>
-      </li>
-      <li class="app-dashboard-tabBar__item">
-        <a class="app-dashboard-tabBar__item__a" href="">History</a>
-      </li>
-    </ul>
-  </div>
+  <ng-include src="'mcs-stellar-client/_footer'"></ng-include>
 </div>
