@@ -45,6 +45,11 @@ app.routes = ($stateProvider) => {
     templateUrl: "mcs-stellar-client/send",
     requireSession: true
   });
+  $stateProvider.state('history', {
+    url: "/history",
+    templateUrl: "mcs-stellar-client/history",
+    requireSession: true
+  });
 };
 
 // Register BroadcastReceivers
