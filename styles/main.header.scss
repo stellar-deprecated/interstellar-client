@@ -61,18 +61,3 @@ html {
 .app-dashboard-tabBar__item__a:hover {
   border-bottom: 4px solid $k-color-F;
 }
-
-// Widget isolation demo
-mcs-stellard-receive > div:hover,
-mcs-stellard-pre-send > div:hover,
-mcs-stellard-balance > div:hover,
-mcs-stellard-pre-send > div:hover,
-mcs-stellard-send > div:hover,
-mcs-stellard-send > div:hover,
-mcs-stellard-receive > div:hover,
-mcs-stellard-history > div:hover {
-  box-shadow: 0px 0px 2px #fff,
-        inset 0px 0px 15px rgba(0,0,0,0.7),
-        inset 0px 0px 1px red,
-        inset 0px 0px 1px red;
-}
