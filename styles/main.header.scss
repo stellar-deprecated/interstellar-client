@@ -28,6 +28,9 @@ html {
   border-bottom: 1px solid $k-color-F;
   justify-content: space-between;
 }
+.app-dashboard-webApp__footer {
+  margin-top: 1px; // same size as the border so that the scroll content doesn't cover border
+}
 .app-dashboard-headerAux {
 }
 .app-dashboard-logo {
