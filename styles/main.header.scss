@@ -24,7 +24,6 @@ html {
 }
 .app-dashboard-webApp__header {
   @include K-flex-row;
-  height: $k-scale-c;
   border-bottom: 1px solid $k-color-F;
   justify-content: space-between;
 }
@@ -32,8 +31,6 @@ html {
   margin-top: 1px; // same size as the border so that the scroll content doesn't cover border
 }
 .app-dashboard-headerAux {
-}
-.app-dashboard-logo {
 }
 .app-dashboard-webApp__popDown {
   background: $k-color-C;
@@ -71,9 +68,13 @@ html {
   display: block;
   padding: 0 $k-spacing-widgetPadding; // TODO: improve story around spacing
 
-  text-transform: lowercase;
   font-size: $k-scale-2;
+  line-height: 2em;
+  text-transform: lowercase;
   color: $k-color-primary;
+}
+.app-branding__text {
+  text-decoration: none;
 }
 
 // builds on top of K-webApp
