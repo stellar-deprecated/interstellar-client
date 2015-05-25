@@ -1,6 +1,34 @@
 <div class="app-dashboard-webApp__header">
-  <span class="app-branding"><a ui-sref="dashboard" class="app-branding__text">Stellar</a></span>
-  <div class="app-dashboard-headerAux">
-    <!--@foobar: 12,345.6 STR --><a class="k-button" ng-click="app.logout()">Log out</a>
+  <div class="app-dashboard-webApp__header__row">
+    <span class="app-branding"><a ui-sref="dashboard" class="app-branding__text">Stellar</a></span>
+    <div class="app-dashboard-headerSecondary">
+      username: <strong>1,234.5 STR</strong> ▼
+      <a ng-click="app.logout()">[Log out]</a>
+    </div>
+  </div>
+
+  <div class="app-dashboard-headerDropdown">
+    <div class="app-dashboard-headerDropdown__content">
+    <div class="app-miniWidget-walletAddress">
+      <strong>wallet address</strong>
+      <div class="app-miniWidget-walletAddress-address">
+        gsrZw5bQNw8RAG7UFF38fiYVPx1KhFdPobhrVLPxUDMbMpoZ4P7
+      </div>
+    </div>
+
+    <div class="app-miniWidget-balances">
+      <strong>balances</strong><br />
+      <div class="app-miniWidget-balances-balance">
+        <span class="app-miniWidget-balances-balance__code">STR</span>
+        <span class="app-miniWidget-balances-balance__amount">1234</span>
+      </div>
+    </div>
+    <div class="app-dashboard-headerDropdown-settingsLauncher">
+      <strong><a href="" ui-sref="settings">go to settings</a></strong>
+    </div>
+    <button class="k-button app-dashboard-headerDropdown-close">
+      close
+    </button>
+    </div>
   </div>
 </div>

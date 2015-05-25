@@ -23,18 +23,100 @@ html {
   @include K-flex-col;
 }
 .app-dashboard-webApp__header {
-  @include K-flex-row;
-  border-bottom: 1px solid $k-color-F;
-  justify-content: space-between;
+  @include K-flex-rowWrap;
+  border-bottom: 1px solid #000;
 }
 .app-dashboard-webApp__footer {
   margin-top: 1px; // same size as the border so that the scroll content doesn't cover border
 }
-.app-dashboard-headerAux {
+.app-dashboard-webApp__header__row {
+  @include K-flexItem-full;
+  @include K-flex-row;
+  justify-content: space-between;
 }
-.app-dashboard-webApp__popDown {
-  background: $k-color-C;
+.app-dashboard-headerSecondary {
+  @include K-flexItem-none;
+  align-self: center;
+  margin-right: $k-spacing-widgetPadding;
 }
+
+// Dropdown section of header
+.app-dashboard-headerDropdown {
+  position: relative;
+
+  @include K-flexItem-full;
+  width: 100%;
+
+  max-height: 0;
+  // max-height: 100%;
+
+  transition: max-height 2.5s;
+}
+.app-dashboard-headerDropdown:hover {
+  max-height: 100%;
+}
+.app-dashboard-headerDropdown:hover .app-dashboard-headerDropdown__content {
+  // display: none;
+}
+.app-dashboard-headerDropdown:hover .app-dashboard-headerDropdown__content {
+  // display: block;
+}
+.app-dashboard-webApp__content {
+  // hack to hide contents
+  z-index: 1;
+  background: #fff;
+}
+.app-dashboard-headerDropdown:after {
+  // This is just a demo
+  position: absolute;
+  bottom: -18px;
+  left: calc(50% - 18px);
+  z-index: 2;
+
+  content: '▼';
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  font-size: 8px;
+  line-height: 18px;
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+
+// mock widgets currently used in dropdown header
+.app-miniWidget-walletAddress {
+  padding: $k-spacing-widgetPadding;
+}
+.app-miniWidget-walletAddress-address {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.app-miniWidget-balances {
+  padding: $k-spacing-widgetPadding;
+}
+.app-miniWidget-balances-balance {
+  @include K-flex-row;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+  padding: $k-spacing-marginSmall 0;
+}
+.app-dashboard-headerDropdown-settingsLauncher {
+  padding: $k-spacing-widgetPadding;
+  border-top: 1px solid #000;
+}
+.app-dashboard-headerDropdown-close {
+  width: 100%;
+  border-color: #000;
+
+  color: #FFF;
+  background: #000;
+  border-radius: 0;
+}
+
 .app-dashboard-webApp__content {
   flex: 1;
   height: 0;
