@@ -11,7 +11,7 @@
 // app-dashboard
 // it is position fixed so that the header bar doesn't cover things up on mobile
 html {
-  overflow: hidden; // disable elastic scrolling
+  // overflow: hidden; // disable elastic scrolling
 }
 .app-dashboard-webApp {
   position: fixed;
@@ -46,7 +46,7 @@ html {
 }
 .app-dashboard-tabBar {
   @include K-flex-row;
-  border-top: 1px solid $k-color-F;
+  border-top: 1px solid #E3E3E3;
 }
 .app-dashboard-tabBar__item {
   flex: 12;
@@ -58,9 +58,41 @@ html {
   border-bottom: 4px solid transparent;
   line-height: $k-scale-up3raw;
 
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
 }
 .app-dashboard-tabBar__item__a:hover {
   border-bottom: 4px solid $k-color-F;
+}
+
+// branding logo (stellar)
+.app-branding {
+  display: block;
+  padding: 0 $k-spacing-widgetPadding; // TODO: improve story around spacing
+
+  text-transform: lowercase;
+  font-size: $k-scale-2;
+  color: $k-color-primary;
+}
+
+// builds on top of K-webApp
+.app-pageCenter {
+  @include K-flex-col;
+  justify-content: space-around;
+}
+.app-pageCenter__centered {
+  @include K-flexItem-none;
+}
+
+// login screen
+.app-login-title {
+  padding: 0 $k-spacing-widgetPadding;
+}
+.app-login-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.app-login-form .k-button {
+  width: 100%;
 }
