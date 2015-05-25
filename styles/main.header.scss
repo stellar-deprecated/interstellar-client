@@ -38,6 +38,7 @@ html {
   @include K-flexItem-none;
   align-self: center;
   margin-right: $k-spacing-widgetPadding;
+  font-size: $k-scale-down1;
 }
 
 // Dropdown section of header
