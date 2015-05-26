@@ -1,6 +1,7 @@
 {
   "name": "mcs-stellar-client",
   "version": "0.0.1",
+  "private": true,
   "description": "The stellar.org modular client",
   "scripts": {
     "test": "gulp test"

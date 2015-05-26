@@ -1,0 +1,11 @@
+{
+  "modules": {
+    "mcs-stellard": {
+      "horizon": {
+        "secure": true,
+        "hostname": "horizon-testnet.stellar.org",
+        "port": 443
+      }
+    }
+  }
+}

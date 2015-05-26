@@ -9,7 +9,8 @@ import {mod as mcsStellard} from "mcs-stellard";
 import {mod as mcsSettings} from "mcs-settings";
 import {mod as mcsStellarApi} from "mcs-stellar-api";
 
-export const app = new App("mcs-stellar-client");
+let config = require('./config.json');
+export const app = new App("mcs-stellar-client", config);
 
 app.use(mcsCore.name);
 app.use(mcsLogin.name);
