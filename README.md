@@ -1,13 +1,12 @@
 Stellar Modular Client System
 =============================
 
+`mcs-stellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core). It uses the [modular client system](https://github.com/stellar/mcs).
+
 TODO: explain the mcs, and the motivation behind it
 
 ## Quickstart
-
-1. Install git, node.js, npm, bower, ruby, and bundler
-1. Clone the repository using git
-1. Install dependencies using `npm install && bower install && bundle install`
+To get started with developing on the `mcs-stellar-client`, use [mcs-workspace](https://github.com/stellar/mcs-workspace), a repository containing the necessary configuration to easily create a environment to build and develop mcs-stellar-client on.
 
 ## Guides
 
