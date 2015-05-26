@@ -2,37 +2,40 @@
   <div class="app-dashboard-webApp__header__row">
     <span class="app-branding"><a ui-sref="dashboard" class="app-branding__text">Stellar</a></span>
     <div class="app-dashboard-headerSecondary">
-      {{header.username}}: <strong>{{header.balance}} XLM</strong> ▼
-      <a ng-click="header.logout()">[Log out]</a>
+      {{header.username}}: <strong>{{header.balance}} STR</strong> ▼
     </div>
   </div>
 
   <div class="app-dashboard-headerDropdown">
+    <input class="app-dashboard-headerDropdown__check" type="checkbox" />
     <div class="app-dashboard-headerDropdown__content">
-    <div class="app-miniWidget-walletAddress">
-      <strong>wallet address</strong>
-      <div class="app-miniWidget-walletAddress-address">
-        gsrZw5bQNw8RAG7UFF38fiYVPx1KhFdPobhrVLPxUDMbMpoZ4P7
+      <div class="app-miniWidget-walletAddress">
+        <strong>wallet address</strong>
+        <div class="app-miniWidget-walletAddress-address">
+          gsrZw5bQNw8RAG7UFF38fiYVPx1KhFdPobhrVLPxUDMbMpoZ4P7
+        </div>
       </div>
-    </div>
 
-    <div class="app-miniWidget-balances">
-      <strong>balances</strong><br />
-      <div class="app-miniWidget-balances-balance">
-        <span class="app-miniWidget-balances-balance__code">STR</span>
-        <span class="app-miniWidget-balances-balance__amount">1234</span>
+      <div class="app-miniWidget-balances">
+        <strong>balances</strong><br />
+        <div class="app-miniWidget-balances-balance">
+          <span class="app-miniWidget-balances-balance__code">STR</span>
+          <span class="app-miniWidget-balances-balance__amount">1234</span>
+        </div>
+        <div class="app-miniWidget-balances-balance">
+          <span class="app-miniWidget-balances-balance__code">ABC</span>
+          <span class="app-miniWidget-balances-balance__amount">567.8</span>
+        </div>
       </div>
-      <div class="app-miniWidget-balances-balance">
-        <span class="app-miniWidget-balances-balance__code">ABC</span>
-        <span class="app-miniWidget-balances-balance__amount">567.8</span>
+      <div class="app-dashboard-headerDropdown-settingsLauncher">
+        <strong><a href="" ui-sref="settings">go to settings</a></strong>
       </div>
-    </div>
-    <div class="app-dashboard-headerDropdown-settingsLauncher">
-      <strong><a href="" ui-sref="settings">go to settings</a></strong>
-    </div>
-    <button class="k-button app-dashboard-headerDropdown-close">
-      close
-    </button>
+      <div class="app-dashboard-headerDropdown-settingsLauncher">
+        <strong><a href="" ng-click="header.logout()">log out</a></strong>
+      </div>
+      <button class="k-button app-dashboard-headerDropdown-close">
+        close
+      </button>
     </div>
   </div>
 </div>

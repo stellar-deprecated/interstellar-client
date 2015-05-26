@@ -47,45 +47,60 @@ html {
 
   @include K-flexItem-full;
   width: 100%;
-
+}
+.app-dashboard-headerDropdown__content {
+  // transition: max-height 0.5s;
   max-height: 0;
-  // max-height: 100%;
-
-  transition: max-height 2.5s;
+  overflow: hidden;
 }
-.app-dashboard-headerDropdown:hover {
+.app-dashboard-headerDropdown__check:checked + .app-dashboard-headerDropdown__content {
   max-height: 100%;
-}
-.app-dashboard-headerDropdown:hover .app-dashboard-headerDropdown__content {
-  // display: none;
-}
-.app-dashboard-headerDropdown:hover .app-dashboard-headerDropdown__content {
-  // display: block;
 }
 .app-dashboard-webApp__content {
   // hack to hide contents
   z-index: 1;
   background: #fff;
 }
-.app-dashboard-headerDropdown:after {
+.app-dashboard-headerDropdown__check {
+
   // This is just a demo
   position: absolute;
-  bottom: -18px;
-  left: calc(50% - 18px);
+  top: -48px;
+  // left: calc(50% - 18px);
+  right: 0;
   z-index: 2;
 
   content: '▼';
   display: inline-block;
-  width: 36px;
-  height: 18px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  width: 190px;
+  height: 48px;
+  // border-top-left-radius: 3px;
+  // border-top-right-radius: 3px;
 
+  opacity: 0.05;
   font-size: 8px;
   line-height: 18px;
   color: #fff;
   background: #000;
   text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+.app-dashboard-headerDropdown__check:checked {
+  right: 0;
+  bottom: 0;
+  top: auto;
+
+  width: 100%;
+  height: 41px;
+  border: none;
+
+  opacity: 0;
+}
+.app-dashboard-headerDropdown__check:hover {
+  border: none;
+  opacity: 0.2;
 }
 
 // mock widgets currently used in dropdown header
@@ -125,8 +140,10 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 .app-dashboard-tabBar {
+  z-index: 1;
   @include K-flex-row;
   border-top: 1px solid #E3E3E3;
+  background: #fff;
 }
 .app-dashboard-tabBar__item {
   flex: 12;
