@@ -1,6 +1,7 @@
-import {Intent} from "mcs-core";
+import {Inject, Intent} from "mcs-core";
 import {find} from "lodash";
 
+@Inject("$scope", "mcs-core.IntentBroadcast", "mcs-stellard.Sessions", "mcs-stellard.Server")
 export class HeaderController {
   constructor($scope, IntentBroadcast, Sessions, Server) {
     this.IntentBroadcast = IntentBroadcast;
@@ -29,8 +30,6 @@ export class HeaderController {
     this.IntentBroadcast.sendBroadcast(new Intent(Intent.TYPES.LOGOUT));
   }
 }
-
-HeaderController.$inject = ["$scope", "mcs-core.IntentBroadcast", "mcs-stellard.Sessions", "mcs-stellard.Server"];
 
 module.exports = function(mod) {
   mod.controller("HeaderController", HeaderController);

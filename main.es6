@@ -3,20 +3,20 @@ require("file?name=index.html!./index.html");
 require('./styles/main.header.scss');
 require('./styles/main.footer.scss');
 
-import {App, Intent, mod as mcsCore} from "mcs-core";
-import {mod as mcsLogin} from "mcs-login";
-import {mod as mcsStellard} from "mcs-stellard";
-import {mod as mcsSettings} from "mcs-settings";
-import {mod as mcsStellarApi} from "mcs-stellar-api";
+import mcsCore, {App, Intent} from "mcs-core";
+import mcsLogin from "mcs-login";
+import mcsStellard from "mcs-stellard";
+import mcsSettings from "mcs-settings";
+import mcsStellarApi from "mcs-stellar-api";
 
 let config = require('./config.json');
-export const app = new App("mcs-stellar-client", config);
+const app = new App("mcs-stellar-client", config);
 
-app.use(mcsCore.name);
-app.use(mcsLogin.name);
-app.use(mcsStellard.name);
-app.use(mcsSettings.name);
-app.use(mcsStellarApi.name);
+app.use(mcsCore);
+app.use(mcsLogin);
+app.use(mcsStellard);
+app.use(mcsSettings);
+app.use(mcsStellarApi);
 
 app.templates   = require.context("raw!./templates", true);
 app.controllers = require.context("./controllers",   true);
