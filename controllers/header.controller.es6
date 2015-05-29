@@ -1,5 +1,5 @@
 import {Inject, Intent} from "mcs-core";
-import {find} from "lodash";
+import {sortBy} from "lodash";
 
 @Inject("$scope", "mcs-core.IntentBroadcast", "mcs-stellard.Sessions", "mcs-stellard.Server")
 export class HeaderController {
@@ -9,14 +9,17 @@ export class HeaderController {
     if (Sessions.hasDefault()) {
       let session = Sessions.default;
       this.username = session.getUsername();
-      let address = session.getAddress();
-      Server.accounts(address)
+      this.address = session.getAddress();
+      Server.accounts(this.address)
         .then(account => {
           if (!account) {
-            this.balance = 0;
+            this.balances = {balance: 0, currency_code: 'STR'};
+            this.balanceSTR = 0;
           } else {
-            let balance = find(account.balances, balance => balance.currency_type === 'native');
-            this.balance = Math.floor(balance.balance/1000000);
+            this.balances = sortBy(account.balances, balance => balance.currency_type !== 'native');
+            this.balances[0].balance = Math.floor(this.balances[0].balance/1000000);
+            this.balances[0].currency_code = 'STR';
+            this.balanceSTR = this.balances[0].balance;
           }
           $scope.$apply();
         })
