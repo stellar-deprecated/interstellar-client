@@ -24,7 +24,6 @@ html {
 }
 .app-dashboard-webApp__header {
   @include K-flex-rowWrap;
-  border-bottom: 1px solid #000;
 }
 .app-dashboard-webApp__footer {
   margin-top: 1px; // same size as the border so that the scroll content doesn't cover border
@@ -33,6 +32,7 @@ html {
   @include K-flexItem-full;
   @include K-flex-row;
   justify-content: space-between;
+  border-bottom: 1px solid #000;
 }
 .app-dashboard-headerSecondary {
   @include K-flexItem-none;
@@ -42,95 +42,44 @@ html {
 }
 
 // Dropdown section of header
-.app-dashboard-headerDropdown {
+.app-headerDropdown {
   position: relative;
 
   @include K-flexItem-full;
   width: 100%;
 }
-.app-dashboard-headerDropdown__content {
-  // transition: max-height 0.5s;
-  max-height: 0;
-  overflow: hidden;
+.app-headerDropdown__content {
+  border-bottom: 1px solid #000;
 }
-.app-dashboard-headerDropdown__check:checked + .app-dashboard-headerDropdown__content {
-  max-height: 100%;
+.app-headerDropdown-row {
+  @include K-flex-row;
+  align-items: center;
+  min-height: $k-scale-up3;
 }
-.app-dashboard-webApp__content {
-  // hack to hide contents
-  z-index: 1;
-  background: #fff;
+.app-headerDropdown-row--padded {
+  padding: 0 $k-spacing-widgetPadding;
 }
-.app-dashboard-headerDropdown__check {
-
-  // This is just a demo
-  position: absolute;
-  top: -48px;
-  // left: calc(50% - 18px);
-  right: 0;
-  z-index: 2;
-
-  content: '▼';
-  display: inline-block;
-  width: 38px;
-  height: 48px;
-  // border-top-left-radius: 3px;
-  // border-top-right-radius: 3px;
-
-  opacity: 0.05;
-  font-size: 8px;
-  line-height: 18px;
-  color: #fff;
-  background: #000;
-  text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
-}
-.app-dashboard-headerDropdown__check:checked {
-  right: 0;
-  bottom: 0;
-  top: auto;
-
-  width: 100%;
-  height: 41px;
-  border: none;
-
-  opacity: 0;
-}
-.app-dashboard-headerDropdown__check:hover {
-  border: none;
-  opacity: 0.2;
+.app-headerDropdown-row--bordered {
+  border-top: 1px solid $k-color-F;
 }
 
-// mock widgets currently used in dropdown header
+// widgets currently used in dropdown header
 .app-miniWidget-walletAddress {
   padding: $k-spacing-widgetPadding;
 }
 .app-miniWidget-walletAddress-address {
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 85%;
 }
 .app-miniWidget-balances {
-  padding: $k-spacing-widgetPadding;
+  padding: 0 $k-spacing-widgetPadding;
 }
-.app-miniWidget-balances-balance {
+.app-miniWidget-balances__balance {
   @include K-flex-row;
   justify-content: space-between;
   border-top: 1px solid #000;
-  padding: $k-spacing-marginSmall 0;
-}
-.app-dashboard-headerDropdown-settingsLauncher {
-  padding: $k-spacing-widgetPadding;
-  border-top: 1px solid #000;
-}
-.app-dashboard-headerDropdown-close {
-  width: 100%;
-  border-color: #000;
-
-  color: #FFF;
-  background: #000;
-  border-radius: 0;
+  padding: 0;
 }
 
 .app-dashboard-webApp__content {
@@ -161,6 +110,9 @@ html {
 }
 .app-dashboard-tabBar__item__a:hover {
   border-bottom: 4px solid $k-color-F;
+}
+.app-dashboard-tabBar__item__a.is-active {
+  border-bottom: 4px solid #000;
 }
 
 // branding logo (stellar)
