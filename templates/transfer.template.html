@@ -1,11 +1,10 @@
 <div class="app-dashboard-webApp">
   <ng-include src="'mcs-stellar-client/_header'"></ng-include>
-  	<div class="app-dashboard-webApp__content">
-  		<mcs-stellard-send></mcs-stellard-send>
-  	</div>
     <div class="app-dashboard-webApp__content">
-      <mcs-stellard-receive></mcs-stellard-receive>
+      <div class="S-flex-col app-transfer-container">
+        <mcs-stellard-send class="S-flexItem-1of2"></mcs-stellard-send>
+        <mcs-stellard-receive class="S-flexItem-1of2"></mcs-stellard-receive>
+      </div>
     </div>
   <ng-include src="'mcs-stellar-client/_footer'"></ng-include>
 </div>
-

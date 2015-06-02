@@ -20,52 +20,52 @@ html {
   bottom: 0;
   left: 0;
 
-  @include K-flex-col;
+  @include S-flex-col;
 }
 .app-dashboard-webApp__header {
-  @include K-flex-rowWrap;
+  @include S-flex-rowWrap;
 }
 .app-dashboard-webApp__footer {
   margin-top: 1px; // same size as the border so that the scroll content doesn't cover border
 }
 .app-dashboard-webApp__header__row {
-  @include K-flexItem-full;
-  @include K-flex-row;
+  @include S-flexItem-full;
+  @include S-flex-row;
   justify-content: space-between;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $s-color-primary;
 }
 .app-dashboard-headerSecondary {
-  @include K-flexItem-none;
+  @include S-flexItem-none;
   align-self: center;
-  margin-right: $k-spacing-widgetPadding;
-  font-size: $k-scale-down1;
+  margin-right: $s-spacing-widgetPadding;
+  font-size: $s-scale-down1;
 }
 
 // Dropdown section of header
 .app-headerDropdown {
   position: relative;
 
-  @include K-flexItem-full;
+  @include S-flexItem-full;
   width: 100%;
 }
 .app-headerDropdown__content {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $s-color-primary;
 }
 .app-headerDropdown-row {
-  @include K-flex-row;
+  @include S-flex-row;
   align-items: center;
-  min-height: $k-scale-up3;
+  min-height: 2.5em;
 }
 .app-headerDropdown-row--padded {
-  padding: 0 $k-spacing-widgetPadding;
+  padding: 0 $s-spacing-widgetPadding;
 }
 .app-headerDropdown-row--bordered {
-  border-top: 1px solid $k-color-F;
+  border-top: 1px solid $s-color-F;
 }
 
 // widgets currently used in dropdown header
 .app-miniWidget-walletAddress {
-  padding: $k-spacing-widgetPadding;
+  padding: $s-spacing-widgetPadding;
 }
 .app-miniWidget-walletAddress-address {
   overflow: hidden;
@@ -73,12 +73,12 @@ html {
   width: 85%;
 }
 .app-miniWidget-balances {
-  padding: 0 $k-spacing-widgetPadding;
+  padding: 0 $s-spacing-widgetPadding 1em $s-spacing-widgetPadding;
 }
 .app-miniWidget-balances__balance {
-  @include K-flex-row;
+  @include S-flex-row;
   justify-content: space-between;
-  border-top: 1px solid #000;
+  border-top: 1px solid $s-color-F;
   padding: 0;
 }
 
@@ -90,8 +90,8 @@ html {
 }
 .app-dashboard-tabBar {
   z-index: 1;
-  @include K-flex-row;
-  border-top: 1px solid #E3E3E3;
+  @include S-flex-row;
+  border-top: 1px solid $s-color-primary;
   background: #fff;
 }
 .app-dashboard-tabBar__item {
@@ -102,28 +102,28 @@ html {
   display: block;
   width: 100%;
   border-bottom: 4px solid transparent;
-  line-height: $k-scale-up3raw;
+  line-height: $s-scale-up3raw;
 
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
 }
 .app-dashboard-tabBar__item__a:hover {
-  border-bottom: 4px solid $k-color-F;
+  border-bottom: 4px solid $s-color-primary;
 }
 .app-dashboard-tabBar__item__a.is-active {
-  border-bottom: 4px solid #000;
+  border-bottom: 4px solid $s-color-primary;
 }
 
 // branding logo (stellar)
 .app-branding {
   display: block;
-  padding: 0 $k-spacing-widgetPadding; // TODO: improve story around spacing
+  padding: 0 $s-spacing-widgetPadding; // TODO: improve story around spacing
 
-  font-size: $k-scale-2;
+  font-size: $s-scale-2;
   line-height: 2em;
   text-transform: lowercase;
-  color: $k-color-primary;
+  color: $s-color-primary;
 }
 .app-branding__text {
   text-decoration: none;
@@ -131,22 +131,22 @@ html {
 
 // builds on top of K-webApp
 .app-pageCenter {
-  @include K-flex-col;
+  @include S-flex-col;
   justify-content: space-around;
 }
 .app-pageCenter__centered {
-  @include K-flexItem-none;
+  @include S-flexItem-none;
 }
 
 // login screen
 .app-login-title {
-  padding: 0 $k-spacing-widgetPadding;
+  padding: 0 $s-spacing-widgetPadding;
 }
 .app-login-form {
   max-width: 400px;
   margin: 0 auto;
 }
-.app-login-form .k-button {
+.app-login-form .s-button {
   width: 100%;
 }
 
@@ -157,4 +157,8 @@ html {
 .app-balances-title {
   text-align: center;
   margin-bottom: 0;
+}
+
+// transfer screen
+.app-transfer-container {
 }
