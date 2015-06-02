@@ -2,11 +2,11 @@
 
 // kelp-library-bundle
 @import "kelp/lib/index";
-@import "kelp-theme-sdf/lib/index";
+@import "kelp-theme-sdf/lib/index"; // uncomment to see how solar-sdf theme impacts the styles
 
 // kelp-css-bundle
 @import "kelp/styles/index";
-@import "kelp-theme-sdf/styles/index";
+@import "kelp-theme-sdf/styles/index"; // uncomment to see how solar-sdf theme impacts the styles
 
 // app-dashboard
 // it is position fixed so that the header bar doesn't cover things up on mobile
