@@ -6,6 +6,7 @@ require('./styles/main.footer.scss');
 import interstellarCore, {App, Intent} from "interstellar-core";
 import interstellarWallet from "interstellar-wallet";
 import interstellarNetwork from "interstellar-network";
+import interstellarNetworkWidgets from "interstellar-network-widgets";
 import interstellarSessions from "interstellar-sessions";
 import interstellarStellarApi from "interstellar-stellar-api";
 
@@ -15,6 +16,7 @@ const app = new App("interstellar-client", config);
 app.use(interstellarCore);
 app.use(interstellarWallet);
 app.use(interstellarNetwork);
+app.use(interstellarNetworkWidgets);
 app.use(interstellarSessions);
 app.use(interstellarStellarApi);
 

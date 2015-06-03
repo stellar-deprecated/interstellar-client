@@ -17,6 +17,7 @@
     "interstellar-wallet": "^0.0.1",
     "interstellar-sessions": "^0.0.1",
     "interstellar-network": "^0.0.1",
+    "interstellar-network-widgets": "^0.0.1",
     "interstellar-stellar-api": "^0.0.1"
   }
 }
