@@ -2,11 +2,11 @@
 
 // solar-library-bundle
 @import "solar/lib/index";
-@import "solar-sdf/lib/index"; // uncomment to see how solar-sdf theme impacts the styles
+@import "solar-stellarorg/lib/index"; // uncomment to see how solar-stellarorg theme impacts the styles
 
 // solar-css-bundle
 @import "solar/styles/index";
-@import "solar-sdf/styles/index"; // uncomment to see how solar-sdf theme impacts the styles
+@import "solar-stellarorg/styles/index"; // uncomment to see how solar-stellarorg theme impacts the styles
 
 // app-dashboard
 // it is position fixed so that the header bar doesn't cover things up on mobile
