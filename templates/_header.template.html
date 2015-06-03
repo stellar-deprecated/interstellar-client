@@ -1,37 +1,36 @@
 <div class="app-dashboard-webApp__header" ng-controller="interstellar-client.HeaderController as header">
   <div class="app-dashboard-webApp__header__row">
     <span class="app-branding"><a ui-sref="dashboard" class="app-branding__text">Stellar</a></span>
-    <div class="app-dashboard-headerSecondary">
+    <button class="s-button app-dashboard-headerSecondary" ng-click="dropdownVisible = !dropdownVisible">
       {{header.username}}: <strong>{{header.balanceSTR}} STR</strong> &nbsp; ▼
-    </div>
+    </button>
   </div>
 
-  <div class="app-dashboard-headerDropdown">
-    <input class="app-dashboard-headerDropdown__check" type="checkbox" />
-    <div class="app-dashboard-headerDropdown__content">
+  <div class="app-headerDropdown">
+    <div class="app-headerDropdown__content" ng-show="dropdownVisible">
       <div class="app-miniWidget-walletAddress">
         <strong>wallet address</strong>
         <div class="app-miniWidget-walletAddress-address">
           {{header.address}}
         </div>
       </div>
-
       <div class="app-miniWidget-balances">
-        <strong>balances</strong><br />
-        <div class="app-miniWidget-balances-balance" ng-repeat="balance in header.balances">
-          <span class="app-miniWidget-balances-balance__code">{{balance.currency_code}}</span>
-          <span class="app-miniWidget-balances-balance__amount">{{balance.balance}}</span>
+        <div class="app-headerDropdown-row">
+          <strong>balances</strong>
+        </div>
+        <div class="app-headerDropdown-row app-miniWidget-balances__balance" ng-repeat="balance in header.balances">
+          <span class="app-miniWidget-balances__balance__code">{{balance.currency_code}}</span>
+          <span class="app-miniWidget-balances__balance__amount">{{balance.balance}}</span>
         </div>
       </div>
-      <!--<div class="app-dashboard-headerDropdown-settingsLauncher">-->
-        <!--<strong><a href="" ui-sref="settings">go to settings</a></strong>-->
-      <!--</div>-->
-      <div class="app-dashboard-headerDropdown-settingsLauncher">
-        <strong><a href="" ng-click="header.logout()">log out</a></strong>
+      <div class="app-headerDropdown-row app-headerDropdown-row--padded app-headerDropdown-row--bordered">
+        <strong><a href="" ui-sref="settings">go to settings</a></strong>
       </div>
-      <button class="k-button app-dashboard-headerDropdown-close">
-        close
-      </button>
+      <div class="app-headerDropdown-row app-headerDropdown-row--padded app-headerDropdown-row--bordered">
+        <div class="app-headerDropdown-row">
+          <strong><a href="" ng-click="header.logout()">log out</a></strong>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,11 +1,10 @@
 <div class="app-dashboard-webApp">
   <ng-include src="'interstellar-client/_header'"></ng-include>
-  	<div class="app-dashboard-webApp__content">
-  		<interstellar-network-widgets-send></interstellar-network-widgets-send>
-  	</div>
     <div class="app-dashboard-webApp__content">
-      <interstellar-network-widgets-receive></interstellar-network-widgets-receive>
+      <div class="S-flex-col app-transfer-container">
+        <interstellar-network-widgets-send class="S-flexItem-1of2"></interstellar-network-widgets-send>
+        <interstellar-network-widgets-receive class="S-flexItem-1of2"></interstellar-network-widgets-receive>
+      </div>
     </div>
   <ng-include src="'interstellar-client/_footer'"></ng-include>
 </div>
-
