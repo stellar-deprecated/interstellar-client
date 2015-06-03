@@ -1,5 +1,5 @@
 {
-  "name": "mcs-stellar-client",
+  "name": "interstellar-client",
   "version": "0.0.1",
   "private": true,
   "description": "The stellar.org modular client",
@@ -10,13 +10,13 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/stellar/mcs.git"
+    "url": "http://github.com/stellar/interstellar-client.git"
   },
   "dependencies": {
-    "mcs-core": "git+https://github.com/stellar/mcs-core.git#master",
-    "mcs-login": "git+https://github.com/stellar/mcs-login.git#master",
-    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master",
-    "mcs-stellar-api": "git+https://github.com/stellar/mcs-stellar-api.git#master",
-    "mcs-settings": "git+https://github.com/stellar/mcs-settings.git#master"
+    "interstellar-core": "^0.0.1",
+    "interstellar-wallet": "^0.0.1",
+    "interstellar-sessions": "^0.0.1",
+    "interstellar-network": "^0.0.1",
+    "interstellar-stellar-api": "^0.0.1"
   }
 }

@@ -1,7 +1,7 @@
-import {Inject, Intent} from "mcs-core";
+import {Inject, Intent} from "interstellar-core";
 import {sortBy} from "lodash";
 
-@Inject("$scope", "mcs-core.IntentBroadcast", "mcs-stellard.Sessions", "mcs-stellard.Server")
+@Inject("$scope", "interstellar-core.IntentBroadcast", "interstellar-sessions.Sessions", "interstellar-network.Server")
 export class HeaderController {
   constructor($scope, IntentBroadcast, Sessions, Server) {
     this.IntentBroadcast = IntentBroadcast;

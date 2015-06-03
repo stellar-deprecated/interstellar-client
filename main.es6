@@ -3,18 +3,20 @@ require("file?name=index.html!./index.html");
 require('./styles/main.header.scss');
 require('./styles/main.footer.scss');
 
-import mcsCore, {App, Intent} from "mcs-core";
-import mcsLogin from "mcs-login";
-import mcsStellard from "mcs-stellard";
-import mcsStellarApi from "mcs-stellar-api";
+import interstellarCore, {App, Intent} from "interstellar-core";
+import interstellarWallet from "interstellar-wallet";
+import interstellarNetwork from "interstellar-network";
+import interstellarSessions from "interstellar-sessions";
+import interstellarStellarApi from "interstellar-stellar-api";
 
 let config = require('./config.json');
-const app = new App("mcs-stellar-client", config);
+const app = new App("interstellar-client", config);
 
-app.use(mcsCore);
-app.use(mcsLogin);
-app.use(mcsStellard);
-app.use(mcsStellarApi);
+app.use(interstellarCore);
+app.use(interstellarWallet);
+app.use(interstellarNetwork);
+app.use(interstellarSessions);
+app.use(interstellarStellarApi);
 
 app.templates   = require.context("raw!./templates", true);
 app.controllers = require.context("./controllers",   true);
@@ -22,25 +24,25 @@ app.controllers = require.context("./controllers",   true);
 app.routes = ($stateProvider) => {
   $stateProvider.state('login', {
     url: "/",
-    templateUrl: "mcs-stellar-client/login"
+    templateUrl: "interstellar-client/login"
   });
   $stateProvider.state('register', {
     url: "/register",
-    templateUrl: "mcs-stellar-client/register"
+    templateUrl: "interstellar-client/register"
   });
   $stateProvider.state('dashboard', {
     url: "/dashboard",
-    templateUrl: "mcs-stellar-client/dashboard",
+    templateUrl: "interstellar-client/dashboard",
     requireSession: true
   });
   $stateProvider.state('transfer', {
     url: "/transfer",
-    templateUrl: "mcs-stellar-client/transfer",
+    templateUrl: "interstellar-client/transfer",
     requireSession: true
   });
   $stateProvider.state('history', {
     url: "/history",
-    templateUrl: "mcs-stellar-client/history",
+    templateUrl: "interstellar-client/history",
     requireSession: true
   });
 };
@@ -59,7 +61,7 @@ let registerBroadcastReceivers = ($state, IntentBroadcast) => {
     $state.go('login');
   });
 };
-registerBroadcastReceivers.$inject = ["$state", "mcs-core.IntentBroadcast"];
+registerBroadcastReceivers.$inject = ["$state", "interstellar-core.IntentBroadcast"];
 app.run(registerBroadcastReceivers);
 
 let goToMainStateWithoutSession = ($state, $rootScope, Sessions) => {
@@ -72,7 +74,7 @@ let goToMainStateWithoutSession = ($state, $rootScope, Sessions) => {
   })
 };
 
-goToMainStateWithoutSession.$inject = ["$state", "$rootScope", "mcs-stellard.Sessions"];
+goToMainStateWithoutSession.$inject = ["$state", "$rootScope", "interstellar-sessions.Sessions"];
 app.run(goToMainStateWithoutSession);
 
 app.bootstrap();

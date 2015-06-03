@@ -1,16 +1,14 @@
-Stellar Modular Client System
+Interstellar Client
 =============================
 
-`mcs-stellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core). It uses the [modular client system](https://github.com/stellar/mcs).
-
-TODO: explain the mcs, and the motivation behind it
+`interstellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core). It uses the [Interstellar Module System](https://github.com/stellar/interstellar).
 
 ## Quickstart
-To get started with developing on the `mcs-stellar-client`, use [mcs-workspace](https://github.com/stellar/mcs-workspace), a repository containing the necessary configuration to easily create a environment to build and develop mcs-stellar-client on.
+To get started with developing on the `interstellar-client`, use [interstellar-workspace](https://github.com/stellar/interstellar-workspace), a repository containing the necessary configuration to easily create a environment to build and develop interstellar-client on.
 
 ## Guides
 
-The [guides](guides) directory of this git repository contains a set of development guides to help you work within the MCS.
+The [docs](https://github.com/stellar/interstellar/tree/master/docs) directory in `interstellar` repo contains a set of development guides to help you work within the Interstellar Module System.
 
 ## Contributing
 

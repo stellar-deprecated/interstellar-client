@@ -1,6 +1,6 @@
 {
   "modules": {
-    "mcs-stellard": {
+    "interstellar-network": {
       "horizon": {
         "secure": true,
         "hostname": "horizon-testnet.stellar.org",
