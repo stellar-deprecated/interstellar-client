@@ -46,7 +46,7 @@ an issue number.
 * [Bug tracker (Github)](https://github.com/stellar/interstellar-client/issues)
 * <a href="https://www.clahub.com/agreements/stellar/stellar-client">Contributor License Agreement</a>
 * [Explore the new API](http://docs.stellarhorizon.apiary.io/)
-* [Readme for stellar-client](https://github.com/stellar/interstellar-client/blob/master/README.md)
+* [Readme for interstellar-client](https://github.com/stellar/interstellar-client/blob/master/README.md)
 * [Join us](http://slack.stellar.org/) on our public Slack Channel at #dev
 
 
