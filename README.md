@@ -1,14 +1,19 @@
 Interstellar Client
 =============================
 
-`interstellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core). It uses the [Interstellar Module System](https://github.com/stellar/interstellar).
+`interstellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core)and is part of the [Interstellar Module System](https://github.com/stellar/interstellar).
 
-## Quickstart
-To get started with developing on the `interstellar-client`, use [interstellar-workspace](https://github.com/stellar/interstellar-workspace), a repository containing the necessary configuration to easily create a environment to build and develop interstellar-client on.
+> Quick start to developing in the Interstellar eco-system:
+>
+> * Read [`Getting started`](https://github.com/stellar/interstellar/tree/master/docs) doc.
+> * Install [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace).
+> * Contribute to our [open-source modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) or develop your own.
+
+You may want to create a testnet account on the new Stellar network using [friendbot](http://www.stellar.org/galaxy#friendbot) if you need to login to the client.
 
 ## Guides
 
-The [docs](https://github.com/stellar/interstellar/tree/master/docs) directory in `interstellar` repo contains a set of development guides to help you work within the Interstellar Module System.
+The [docs](https://github.com/stellar/interstellar/tree/master/docs) directory in [`interstellar`](https://github.com/stellar/interstellar) repo contains a set of development guides to help you work within the Interstellar Module System.
 
 ## Contributing
 
