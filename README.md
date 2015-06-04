@@ -7,7 +7,7 @@ Interstellar Client
 >
 > * Read [`Getting started`](https://github.com/stellar/interstellar/tree/master/docs) doc.
 > * Install [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace).
-> * Contribute to our [open-source modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) or develop your own.
+> * [Contribute](CONTRIBUTING.md) to our [open-source modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) or develop your own.
 
 You may want to create a testnet account on the new Stellar network using [friendbot](http://www.stellar.org/galaxy#friendbot) if you need to login to the client.
 
