@@ -25,7 +25,7 @@ ask contributors to follow so that we can merge your changes quickly.
 
 * <a href="https://www.clahub.com/agreements/stellar/stellar-client">Sign the Contributor License Agreement</a>
 * Push your changes to a topic branch in your fork of the repository.
-* Submit a pull request to the [stellar-client repository](https://github.com/stellar/stellar-client) in the Stellar organization.
+* Submit a pull request to the [interstellar-client repository](https://github.com/stellar/interstellar-client) in the Stellar organization.
  * Include a descriptive [commit message](https://github.com/erlang/otp/wiki/Writing-good-commit-messages).
  * Changes contributed via pull request should focus on a single issue at a time.
  * Rebase your local changes against the master branch. Resolve any conflicts that arise.
@@ -43,11 +43,11 @@ an issue number.
 
 # Additional Resources
 
-* [Bug tracker (Github)](https://github.com/stellar/stellar-client/issues)
+* [Bug tracker (Github)](https://github.com/stellar/interstellar-client/issues)
 * <a href="https://www.clahub.com/agreements/stellar/stellar-client">Contributor License Agreement</a>
-* [Explore the API](https://www.stellar.org/api/)
-* [Readme for stellar-client](https://github.com/stellar/stellar-client/blob/master/README.md)
-* #stellar-dev IRC channel on freenode.org
+* [Explore the new API](http://docs.stellarhorizon.apiary.io/)
+* [Readme for stellar-client](https://github.com/stellar/interstellar-client/blob/master/README.md)
+* [Join us](http://slack.stellar.org/) on our public Slack Channel at #dev
 
 
 This document is inspired by:
