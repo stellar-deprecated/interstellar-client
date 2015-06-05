@@ -12,20 +12,20 @@ export class HeaderController {
       this.address = session.getAddress();
       Server.accounts(this.address)
         .then(account => {
-          if (!account) {
-            this.balances = {balance: 0, currency_code: 'STR'};
+          this.balances = sortBy(account.balances, balance => balance.currency_type !== 'native');
+          this.balances[0].balance = Math.floor(this.balances[0].balance/1000000);
+          this.balances[0].currency_code = 'STR';
+          this.balanceSTR = this.balances[0].balance;
+        })
+        .catch(e => {
+          if (e.name === 'NotFoundError') {
+            this.balances = [{balance: 0, currency_code: 'STR'}];
             this.balanceSTR = 0;
           } else {
-            this.balances = sortBy(account.balances, balance => balance.currency_type !== 'native');
-            this.balances[0].balance = Math.floor(this.balances[0].balance/1000000);
-            this.balances[0].currency_code = 'STR';
-            this.balanceSTR = this.balances[0].balance;
+            throw e;
           }
-          $scope.$apply();
         })
-        .catch(error => {
-          console.error(error);
-        });
+        .finally(() => $scope.$apply());
     }
   }
 
