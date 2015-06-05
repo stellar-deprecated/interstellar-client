@@ -4,7 +4,7 @@ Interstellar Client
 `interstellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core) and is part of the [Interstellar Module System](https://github.com/stellar/interstellar).
 
 ###Current state
-This client is for developer exploration, not for use. It connects to Stellar's testnet. The testnet ledger will be reset when the system is ready for public release.
+This client is for developer exploration, not for use. It connects to Stellar's testnet. The testnet ledger will be reset when the system is ready for public release. We're designing the client mobile-first. It's currently accessible on desktop with a mobile layout.
 
 > Quick start to developing in the Interstellar eco-system:
 >
