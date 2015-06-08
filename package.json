@@ -13,7 +13,7 @@
     "url": "http://github.com/stellar/interstellar-client.git"
   },
   "dependencies": {
-    "interstellar-core": "^0.0.1",
+    "interstellar-core": "^0.0.2",
     "interstellar-wallet": "^0.0.1",
     "interstellar-sessions": "^0.0.1",
     "interstellar-network": "^0.0.1",
