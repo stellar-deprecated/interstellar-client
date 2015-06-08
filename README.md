@@ -3,7 +3,7 @@ Interstellar Client
 
 `interstellar-client` is a reference client for the new [Stellar network](https://github.com/stellar/stellar-core) and is part of the [Interstellar Module System](https://github.com/stellar/interstellar).
 
-###Current state
+## Current state
 This client is for developer exploration, not for use. It connects to Stellar's testnet. The testnet ledger will be reset when the system is ready for public release. We're designing the client mobile-first. It's currently accessible on desktop with a mobile layout.
 
 > Quick start to developing in the Interstellar eco-system:
@@ -12,7 +12,7 @@ This client is for developer exploration, not for use. It connects to Stellar's 
 > * Install [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace).
 > * [Contribute](CONTRIBUTING.md) to our [open-source modules](https://github.com/stellar/interstellar/blob/master/docs/module-list.md) or develop your own.
 
-You may want to create a testnet account on the new Stellar network using [friendbot](http://www.stellar.org/galaxy#friendbot) if you need to login to the client.
+You can log in with a Stellar Wallet account created on the [old Stellar client](https://launch.stellar.org/#/register). The interstellar-client will create a new testnet account for you. To get started with this new testnet account, use the [friendbot](https://www.stellar.org/galaxy#friendbot) to fund it.
 
 ## How it works
 The Interstellar client is an application built with [Interstellar](https://github.com/stellar/interstellar). The command line tool takes several disparate modules based on customizable configuration to build the application:
