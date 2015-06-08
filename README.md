@@ -15,7 +15,7 @@ This client is for developer exploration, not for use. It connects to Stellar's 
 You may want to create a testnet account on the new Stellar network using [friendbot](http://www.stellar.org/galaxy#friendbot) if you need to login to the client.
 
 ## How it works
-The Interstellar client is an application developed on [Interstellar](https://github.com/stellar/interstellar), which is a command line tool. The command line tool takes several disparate modules based on customizable configuration to build the application:
+The Interstellar client is an application built with [Interstellar](https://github.com/stellar/interstellar). The command line tool takes several disparate modules based on customizable configuration to build the application:
 
 ![overview](https://www.stellar.org/wp-content/uploads/2015/06/interstellar-overview.png)
 
