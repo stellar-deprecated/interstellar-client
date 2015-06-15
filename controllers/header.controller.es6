@@ -1,8 +1,10 @@
-import {Inject, Intent} from "interstellar-core";
-import {sortBy} from "lodash";
+import {Intent} from "interstellar-core";
+import {Controller, Inject} from "interstellar-core";
+import {isArray, sortBy} from "lodash";
 
+@Controller("HeaderController")
 @Inject("$scope", "interstellar-core.IntentBroadcast", "interstellar-network.AccountObservable", "interstellar-sessions.Sessions", "interstellar-network.Server")
-export class HeaderController {
+export default class HeaderController {
   constructor($scope, IntentBroadcast, AccountObservable, Sessions, Server) {
     this.$scope = $scope;
     this.IntentBroadcast = IntentBroadcast;
@@ -19,7 +21,7 @@ export class HeaderController {
   }
 
   onBalanceChange(balances) {
-    if (balances) {
+    if (isArray(balances) && balances.length > 0) {
       this.balances = sortBy(balances, balance => balance.currency_type !== 'native');
       this.balances[0].balance = Math.floor(this.balances[0].balance/1000000);
       this.balances[0].currency_code = 'STR';
@@ -35,7 +37,3 @@ export class HeaderController {
     this.IntentBroadcast.sendBroadcast(new Intent(Intent.TYPES.LOGOUT));
   }
 }
-
-module.exports = function(mod) {
-  mod.controller("HeaderController", HeaderController);
-};
