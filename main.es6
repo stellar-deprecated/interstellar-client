@@ -47,6 +47,11 @@ app.routes = ($stateProvider) => {
     templateUrl: "interstellar-client/history",
     requireSession: true
   });
+  $stateProvider.state('settings', {
+    url: "/settings",
+    templateUrl: "interstellar-client/settings",
+    requireSession: true
+  });
 };
 
 // Register BroadcastReceivers
