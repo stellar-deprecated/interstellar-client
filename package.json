@@ -18,6 +18,7 @@
     "interstellar-sessions": "^0.0.2",
     "interstellar-network": "^0.0.2",
     "interstellar-network-widgets": "^0.0.2",
-    "interstellar-stellar-api": "^0.0.2"
+    "interstellar-stellar-api": "^0.0.2",
+    "interstellar-ui-messages": "^0.0.1"
   }
 }

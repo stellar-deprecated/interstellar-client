@@ -9,6 +9,7 @@ import interstellarNetwork from "interstellar-network";
 import interstellarNetworkWidgets from "interstellar-network-widgets";
 import interstellarSessions from "interstellar-sessions";
 import interstellarStellarApi from "interstellar-stellar-api";
+import interstellarUiMessages from "interstellar-ui-messages";
 
 let config = require('./config.json');
 const app = new App("interstellar-client", config);
@@ -19,6 +20,7 @@ app.use(interstellarNetwork);
 app.use(interstellarNetworkWidgets);
 app.use(interstellarSessions);
 app.use(interstellarStellarApi);
+app.use(interstellarUiMessages);
 
 app.templates   = require.context("raw!./templates", true);
 app.controllers = require.context("./controllers",   true);
