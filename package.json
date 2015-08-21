@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "interstellar-core": "^0.0.2",
-    "interstellar-wallet": "^0.0.2",
-    "interstellar-sessions": "^0.0.2",
-    "interstellar-network": "^0.0.2",
-    "interstellar-network-widgets": "^0.0.2",
+    "interstellar-wallet": "^0.0.3",
+    "interstellar-sessions": "^0.0.4",
+    "interstellar-network": "^0.0.4",
+    "interstellar-network-widgets": "^0.0.4",
     "interstellar-stellar-api": "^0.0.2",
-    "interstellar-ui-messages": "^0.0.1"
+    "interstellar-ui-messages": "^0.0.2"
   }
 }
