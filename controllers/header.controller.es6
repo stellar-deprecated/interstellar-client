@@ -24,11 +24,11 @@ export default class HeaderController {
     if (isArray(balances) && balances.length > 0) {
       this.balances = sortBy(balances, balance => balance.currency_type !== 'native');
       this.balances[0].balance = Math.floor(this.balances[0].balance/1000000);
-      this.balances[0].currency_code = 'STR';
-      this.balanceSTR = this.balances[0].balance;
+      this.balances[0].currency_code = 'XLM';
+      this.balanceXLM = this.balances[0].balance;
     } else {
-      this.balances = [{balance: 0, currency_code: 'STR'}];
-      this.balanceSTR = 0;
+      this.balances = [{balance: 0, currency_code: 'XLM'}];
+      this.balanceXLM = 0;
     }
     this.$scope.$apply();
   }
