@@ -32,12 +32,12 @@ html {
   @include S-flexItem-full;
   @include S-flex-row;
   justify-content: space-between;
-  border-bottom: 1px solid $s-color-primary;
+  border-bottom: 1px solid $s-color-primary3;
 }
 .app-dashboard-headerSecondary {
-  @include S-flexItem-none;
+  @include S-flexItem-noFlex;
   align-self: center;
-  margin-right: $s-spacing-widgetPadding;
+  margin-right: 12px;
   font-size: $s-scale-down1;
 }
 
@@ -49,7 +49,7 @@ html {
   width: 100%;
 }
 .app-headerDropdown__content {
-  border-bottom: 1px solid $s-color-primary;
+  border-bottom: 1px solid $s-color-primary3;
 }
 .app-headerDropdown-row {
   @include S-flex-row;
@@ -57,15 +57,15 @@ html {
   min-height: 2.5em;
 }
 .app-headerDropdown-row--padded {
-  padding: 0 $s-spacing-widgetPadding;
+  padding: 0 12px;
 }
 .app-headerDropdown-row--bordered {
-  border-top: 1px solid $s-color-F;
+  border-top: 1px solid $s-color-light1;
 }
 
 // widgets currently used in dropdown header
 .app-miniWidget-walletAddress {
-  padding: $s-spacing-widgetPadding;
+  padding: 12px;
 }
 .app-miniWidget-walletAddress-address {
   overflow: hidden;
@@ -73,12 +73,12 @@ html {
   width: 85%;
 }
 .app-miniWidget-balances {
-  padding: 0 $s-spacing-widgetPadding 1em $s-spacing-widgetPadding;
+  padding: 0 12px 1em 12px;
 }
 .app-miniWidget-balances__balance {
   @include S-flex-row;
   justify-content: space-between;
-  border-top: 1px solid $s-color-F;
+  border-top: 1px solid $s-color-light1;
   padding: 0;
 }
 
@@ -91,7 +91,7 @@ html {
 .app-dashboard-tabBar {
   z-index: 1;
   @include S-flex-row;
-  border-top: 1px solid $s-color-primary;
+  border-top: 1px solid $s-color-primary3;
   background: #fff;
 }
 .app-dashboard-tabBar__item {
@@ -109,21 +109,21 @@ html {
   text-transform: uppercase;
 }
 .app-dashboard-tabBar__item__a:hover {
-  border-bottom: 4px solid $s-color-primary;
+  border-bottom: 4px solid $s-color-primary3;
 }
 .app-dashboard-tabBar__item__a.is-active {
-  border-bottom: 4px solid $s-color-primary;
+  border-bottom: 4px solid $s-color-primary3;
 }
 
 // branding logo (stellar)
 .app-branding {
   display: block;
-  padding: 0 $s-spacing-widgetPadding; // TODO: improve story around spacing
+  padding: 0 12px; // TODO: improve story around spacing
 
   font-size: $s-scale-2;
   line-height: 2em;
   text-transform: lowercase;
-  color: $s-color-primary;
+  color: $s-color-primary3;
 }
 .app-branding__text {
   text-decoration: none;
@@ -135,12 +135,12 @@ html {
   justify-content: space-around;
 }
 .app-pageCenter__centered {
-  @include S-flexItem-none;
+  @include S-flexItem-noFlex;
 }
 
 // login screen
 .app-login-title {
-  padding: 0 $s-spacing-widgetPadding;
+  padding: 0 12px;
 }
 .app-login-form {
   max-width: 400px;
