@@ -60,7 +60,7 @@ html {
   padding: 0 12px;
 }
 .app-headerDropdown-row--bordered {
-  border-top: 1px solid $s-color-light1;
+  border-top: 1px solid $s-color-neutral6;
 }
 
 // widgets currently used in dropdown header
@@ -78,7 +78,7 @@ html {
 .app-miniWidget-balances__balance {
   @include S-flex-row;
   justify-content: space-between;
-  border-top: 1px solid $s-color-light1;
+  border-top: 1px solid $s-color-neutral6;
   padding: 0;
 }
 
